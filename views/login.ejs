@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <title>Blog Web Application</title>
+
+</head>
+
+<body style="background-color: rgba(255, 228, 196, 0.671);">
+  <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+      <div class="col-lg-7 text-center text-lg-start">
+        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-amd" viewBox="0 0 16 16">
+              <path d="m.334 0 4.358 4.359h7.15v7.15l4.358 4.358V0zM.2 9.72l4.487-4.488v6.281h6.28L6.48 16H.2z"/>
+            </svg>
+        </a>
+        <h3><em>Vlog</em></h3>
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Let's Make it <em style="color: chocolate;">Happen Together!!</em></h1>
+        <!-- <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p> -->
+      </div>
+      <div class="col-md-10 mx-auto col-lg-5" >
+        
+        <form action="/home" method="post" class="p-4 p-md-5 border rounded-3 bg-body-tertiary" >
+          <div class="form-floating mb-3" >
+            <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <label for="email">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+            <label for="password">Password</label>
+          </div>
+          <input type="submit" value="Sign Up" class="w-100 btn btn-lg btn-primary" style="background-color: chocolate;">
+          <p style="color: red;"><% if(locals.validUser===false){ %>
+            Invalid User
+            <% } %>
+          </p>
+          <hr class="my-4">
+          <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<div style="background-color: rgba(255, 228, 196, 0.671) ; height: 100vh;" >
+    
+            <form action="/api/posts" method="post">
+                <h1><%= heading %></h1>
+                <div class="input-floating-label form-floating mb-4" style="background-color: white;">
+                
+                    <input type="text" class="form-control bg-transparent" id="floatingName" placeholder="Title" name="title" required>
+                    <label for="floatingName">Title</label>
+                </div>
+                <div class="input-floating-label form-floating mb-4" style="background-color: white;">
+                    <textarea class="form-control bg-transparent" placeholder="Write your thoughts here" id="floatingTextarea2" style="height: 100px" name="content" required></textarea>
+                    <label for="floatingTextarea2">Content</label>
+                </div>
+                <div class="input-floating-label form-floating mb-4" style="background-color: white;">
+                
+                    <input type="text" class="form-control bg-transparent" id="floatingName" placeholder="Author" name="author" required>
+                    <label for="floatingName">Author</label>
+                </div>
+                <div>
+                    <input type="submit" value="<%= submit %>" class="w-100 btn btn-lg btn-primary" style="background-color: chocolate;">
+                </div>
+            </form>
+</div>
+<%- include("partials/footer.ejs") %>
+      

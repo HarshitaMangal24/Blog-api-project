@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+<div style="text-align: center;">
+  <a href="/new"><button type="button" class="btn btn-primary" style="background-color: chocolate;">Create New Post</button></a>
+</div>
+  <% posts.forEach(post=>{ %>
+  <section style="background-color:  rgba(255, 228, 196, 0.671);">
+  <div class="px-4 py-5 my-5 text-center" style="background-color:white; margin: 80px;">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" style="margin:10px;" width="50" height="50" fill="currentColor" class="bi bi-amd" viewBox="0 0 16 16">
+          <path d="m.334 0 4.358 4.359h7.15v7.15l4.358 4.358V0zM.2 9.72l4.487-4.488v6.281h6.28L6.48 16H.2z"/>
+        </svg><br>
+        <small><%=post.date %></small>
+      <h1 class="display-5 fw-bold text-body-emphasis"><%= post.title%></h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4"><%= post.content %></p>
+        <p class="lead mb-4"><%= post.author %></p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" >
+          <a href="/edit/<%= post.id %>"><button type="button" class="btn btn-primary btn-lg px-4 gap-3" style="background-color: chocolate;">Edit</button></a>
+          <a href="/api/posts/delete/<%= post.id %>"><button type="button" class="btn btn-primary btn-lg px-4 gap-3" style="background-color: chocolate;">Delete</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+    <%} );%>
+  
+<%- include("partials/footer.ejs") %>
